@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 🔑 Cargar secretos de GitHub
+        run: echo "Secretos cargados correctamente"
         env:
           AVC_CLIENT_ID: ${{ secrets.AVC_CLIENT_ID }}
           AVC_SECRET: ${{ secrets.AVC_SECRET }}
