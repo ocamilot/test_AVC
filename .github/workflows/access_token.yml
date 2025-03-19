@@ -8,10 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Clonar el repositorio
+      - name: 📥 Clonar el repositorio y 🔑 Configurar credenciales de AWS
         uses: actions/checkout@v4
-        
-      - name: 🔑 Configurar credenciales de AWS
         env:
           AWS_ACCESS_KEY_ID: ASIATCKAS3F675ADQGHV
           AWS_SECRET_ACCESS_KEY: kk48nOTl5NGTty8u90sJGamWDX6jWvgb10+onEo+
