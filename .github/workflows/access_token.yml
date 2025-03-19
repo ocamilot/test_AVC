@@ -23,8 +23,8 @@ jobs:
           python-version: '3.10'
 
       - name: 📦 Instalar dependencias
-        run: pip install requests
-
+        run: pip install requests && pip install requests boto3
+        
       - name: 🚀 Ejecutar script
         run: python get_access_token.py
         env:
