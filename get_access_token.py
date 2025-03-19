@@ -4,6 +4,11 @@ import requests
 # Leer variables de entorno desde GitHub Secrets
 client_id = os.getenv("AVC_CLIENT_ID")
 client_secret = os.getenv("AVC_SECRET")
+directorio_actual = os.getcwd()
+print("Directorio actual:", directorio_actual)
+print("Cliente ID:", client_id)
+print("Secret:", client_secret)
+
 
 if not client_id or not client_secret:
     raise ValueError("Las variables de entorno AVC_CLIENT_ID y AVC_SECRET deben estar configuradas.")
