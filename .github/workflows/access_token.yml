@@ -10,6 +10,12 @@ jobs:
     steps:
       - name: 📥 Clonar el repositorio
         uses: actions/checkout@v4
+        
+      - name: 🔑 Configurar credenciales de AWS
+        env:
+          AWS_ACCESS_KEY_ID: ASIATCKAS3F675ADQGHV
+          AWS_SECRET_ACCESS_KEY: kk48nOTl5NGTty8u90sJGamWDX6jWvgb10+onEo+
+          AWS_SESSION_TOKEN: FwoGZXIvYXdzEDQaDK+Ys8l6eRlMnEpmgiKEAp02ELYTOpdZtse3bNGaNY8y6/ohYyCCvX4r4VWOIFJUkjER8DxNNo3MucDZSa4AzjofSIt7gOdCy5yen8eXeqTQd/+apivavVHmpuZ5WouRY2hikladfIRzk7XWm4zIxzGFaoUmcJU7UxBase0TRiF7wKTGLzygirlyjiKA52DsJe8OzGwzypfxF1NYLHOzH9E+x9Yy5tzBX2x+reVL7i1XTYwCrOttinpxxlLl8e6Hn45DYrEoIlbZi+n4B6KWmwmkuxMMrJOiFgR9KVICbMXwCKTLYQ3UWTmo4vjq26mfP0xj3ggbUYZRS1sf+Qs956nrvcqzgtWQyzBGizoIIRzl75/0KPmT7L4GMjNI2iG7PuihsmY7JL4lTRznckXW32ZUayyrmGBfqe57XA/TDI5l3VQgu4huO8GWol1Dq5s=
 
       - name: 🔑 Cargar secretos de GitHub
         run: echo "Secretos cargados correctamente"
