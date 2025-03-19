@@ -1,0 +1,31 @@
+name: Obtener Access Token
+
+on:  
+  workflow_dispatch:  # Permite ejecutar manualmente desde GitHub Actions
+
+jobs:
+  get-token:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: 🔑 Cargar secretos de GitHub
+        env:
+          AVC_CLIENT_ID: ${{ secrets.AVC_CLIENT_ID }}
+          AVC_SECRET: ${{ secrets.AVC_SECRET }}
+
+      - name: 🐍 Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Instalar dependencias
+        run: pip install requests
+
+      - name: 🚀 Ejecutar script
+        run: python get_access_token.py
+        env:
+          AVC_CLIENT_ID: ${{ secrets.AVC_CLIENT_ID }}
+          AVC_SECRET: ${{ secrets.AVC_SECRET }}
