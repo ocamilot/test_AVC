@@ -2,7 +2,7 @@ import json
 
 # Definir los nuevos valores de los secretos
 secrets = {
-    "SECRET_ONE": "nuevo_valor_1",
+    "SECRET_ONE": "PRUEBALO",
     "SECRET_TWO": "nuevo_valor_2"
 }
 
